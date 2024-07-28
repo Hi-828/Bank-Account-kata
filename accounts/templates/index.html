@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Management</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Deposit</h2>
+        <label for="deposit-iban">IBAN:</label>
+        <input type="text" id="deposit-iban" required>
+        <br>
+        <label for="deposit-amount">Amount:</label>
+        <input type="number" id="deposit-amount" required>
+        <br>
+        <button onclick="handleDeposit()">Deposit</button>
+    </div>
+
+    <div class="form-container">
+        <h2>Withdraw</h2>
+        <label for="withdraw-iban">IBAN:</label>
+        <input type="text" id="withdraw-iban" required>
+        <br>
+        <label for="withdraw-amount">Amount:</label>
+        <input type="number" id="withdraw-amount" required>
+        <br>
+        <button onclick="handleWithdraw()">Withdraw</button>
+    </div>
+
+    <div class="form-container">
+        <h2>Transfer</h2>
+        <label for="transfer-from-iban">From IBAN:</label>
+        <input type="text" id="transfer-from-iban" required>
+        <br>
+        <label for="transfer-to-iban">To IBAN:</label>
+        <input type="text" id="transfer-to-iban" required>
+        <br>
+        <label for="transfer-amount">Amount:</label>
+        <input type="number" id="transfer-amount" required>
+        <br>
+        <button onclick="handleTransfer()">Transfer</button>
+    </div>
+
+    <div class="form-container">
+        <h2>Account Statement</h2>
+        <label for="statement-iban">IBAN (optional for admin):</label>
+        <input type="text" id="statement-iban">
+        <br>
+        <button onclick="fetchStatement()">Get Statement</button>
+    </div>
+    
+    <div class="result-container" id="result-container"></div>
+    <div class="statement-container" id="statement-container"></div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
